@@ -19,22 +19,21 @@ export default {
             apiURL: 'https://www.breakingbadapi.com/api/characters',
             character: []
         }
-    }
-};
-methods: {
-    getApi(){
-        axios.get(this.apiURL).then(
-            (res) => {
-                this.MainComponent = [...res.data.results];
-                console.log(this.MainComponent)
-            }
-        )
     },
-    created(){
-        this.getApi()
+    methods: {
+        getApi() {
+            axios.get(this.apiURL).then(
+                (res) => {
+                    this.MainComponent = [...res.data.results];
+                    console.log(this.MainComponent);
+                }
+            )
+        },
+        created() {
+            this.getApi();
+        }
     }
 }
-
 </script>
 
 <style lang="scss" scoped>
