@@ -5,7 +5,7 @@
             Found 62 characters
         </div>
         <div class="card">
-            <!--  : {{ }} -->
+
         </div>
     </div>
 
@@ -13,21 +13,28 @@
 
 <script>
 export default {
-    name: 'MainComponent';
+    name: 'MainComponent',
     data() {
         return {
-            character: [],
+            apiURL: 'https://www.breakingbadapi.com/api/characters',
+            character: []
         }
     }
-},
+};
 methods: {
-    insApi(){
-        axios.ins('https://www.breakingbadapi.com/api/characters').then((res) => {
-            console.log(res.data)
-            this.character = [...res.data]
-        })
+    getApi(){
+        axios.get(this.apiURL).then(
+            (res) => {
+                this.MainComponent = [...res.data.results];
+                console.log(this.MainComponent)
+            }
+        )
+    },
+    created(){
+        this.getApi()
     }
 }
+
 </script>
 
 <style lang="scss" scoped>
@@ -35,5 +42,6 @@ methods: {
 
 .bluscuro {
     background-color: $bluscuro;
+    color: white;
 }
 </style>
