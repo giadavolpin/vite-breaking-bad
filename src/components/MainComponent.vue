@@ -5,7 +5,7 @@
             Found 62 characters
         </div>
         <div class="card">
-            : {{ }}
+            <!--  : {{ }} -->
         </div>
     </div>
 
