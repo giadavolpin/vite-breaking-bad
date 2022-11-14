@@ -1,13 +1,14 @@
 <template>
-    <div class="bianco">
-        <div class="bluscuro">
-            Found 62 characters
-        </div>
-        <div class="card">
+    <main>
+        <div class="bianco">
+            <div class="bluscuro">
+                Found 62 characters
+            </div>
+            <div class="card">
 
+            </div>
         </div>
-    </div>
-
+    </main>
 </template>
 
 <script>
@@ -41,5 +42,9 @@ export default {
 .bluscuro {
     background-color: $bluscuro;
     color: white;
+}
+
+.bianco {
+    background-color: white;
 }
 </style>

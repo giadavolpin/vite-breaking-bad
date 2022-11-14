@@ -1,8 +1,10 @@
 <template>
     <nav>
         <!-- icona -->
-        <h1>Breaking Bad Api</h1>
-        <button>Select category</button>
+        <div>
+            <h1>Breaking Bad Api</h1>
+        </div>
+        <div><button>Select category</button></div>
     </nav>
 </template>
 
@@ -19,7 +21,6 @@ export default {
 nav {
     height: 120px;
     width: 100%;
-    background-color: $blucard;
     color: white;
 }
 </style>
