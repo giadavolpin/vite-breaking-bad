@@ -8,8 +8,13 @@ import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
 
 export default {
-  apiURL: https://www.breakingbadapi.com/api/characters 
+  components: {
+    HeaderComponent,
+    MainComponent
+
+  }
 }
+
 </script>
 
 <style lang="scss" scoped>
