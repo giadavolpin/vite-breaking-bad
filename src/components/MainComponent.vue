@@ -1,5 +1,4 @@
 <template>
-    <button>Select category</button>
     <div class="bianco">
         <div class="bluscuro">
             Found 62 characters
