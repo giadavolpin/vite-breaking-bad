@@ -18,9 +18,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use '../assets/style/variables.scss' as *;
-
-nav main {
-  background-color: $blucard;
-}
+@use './assets/style/variables.scss' as *;
+@use './assets/style/general.scss' as *;
 </style>

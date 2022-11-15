@@ -4,8 +4,11 @@
             <div class="bluscuro">
                 Found 62 characters
             </div>
-            <div class="card">
-
+            <div class="card bluscuro" v-for="character in data.return">
+                {{ character }}
+                <div class="grigio" v-for="name in data.return">
+                    {{ name }}
+                </div>
             </div>
         </div>
     </main>
@@ -17,7 +20,8 @@ export default {
     data() {
         return {
             apiURL: 'https://www.breakingbadapi.com/api/characters',
-            character: []
+            character: [],
+            name: []
         }
     },
     methods: {
@@ -38,10 +42,15 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/style/variables.scss' as *;
+@use '../assets/style/general.scss' as*;
 
 .bluscuro {
     background-color: $bluscuro;
     color: white;
+}
+
+.grigio {
+    color: $grigio;
 }
 
 .bianco {

@@ -17,6 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/style/variables.scss' as *;
+@use '../assets/style/general.scss' as*;
 
 nav {
     height: 120px;
