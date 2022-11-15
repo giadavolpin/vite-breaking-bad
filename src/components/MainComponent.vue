@@ -4,10 +4,10 @@
             <div class="bluscuro">
                 Found 62 characters
             </div>
-            <div class="card bluscuro" v-for="character in data.return">
-                {{ character }}
-                <div class="grigio" v-for="name in data.return">
-                    {{ name }}
+            <div class="card bluscuro" v-for="character in characters">
+                <img :src="character.img" alt="" />
+                <div class="grigio">
+                    {{ character.name }}
                 </div>
             </div>
         </div>
@@ -15,27 +15,33 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
     name: 'MainComponent',
     data() {
         return {
             apiURL: 'https://www.breakingbadapi.com/api/characters',
-            character: [],
-            name: []
+            characters: [],
+
         }
     },
     methods: {
         getApi() {
             axios.get(this.apiURL).then(
                 (res) => {
-                    this.MainComponent = [...res.data.results];
-                    console.log(this.MainComponent);
+
+                    // res.data.results.forEach(element => {
+                    //     this.character.push(element)
+                    // });
+                    this.characters = [...res.data];
+                    console.log(this.characters);
                 }
             )
-        },
-        created() {
-            this.getApi();
         }
+    },
+    created() {
+        this.getApi();
     }
 }
 </script>

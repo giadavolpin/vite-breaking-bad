@@ -1,5 +1,5 @@
-/*  variables from './variables.scss' as *; */
-/* 
+@use './variables' as *; //as = usa * = tutto 
+
 nav main {
     background-color: $blucard;
-} */
+}
