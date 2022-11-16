@@ -4,10 +4,13 @@
             <div class="bluscuro">
                 Found 62 characters
             </div>
-            <div class="card bluscuro" v-for="character in characters">
-                <img :src="character.img" alt="" />
-                <div class="grigio">
-                    {{ character.name }}
+            <!-- prendere l'ID dall'array attraverso il ciclo v-for -->
+            <div class="cards">
+                <div class="card bluscuro" v-for="(character, index) in characters" :key="index">
+                    <img :src="character.img" alt="" />
+                    <div class="grigio">
+                        {{ character.name }}
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,5 +64,19 @@ export default {
 
 .bianco {
     background-color: white;
+}
+
+img {
+    height: 200px;
+    width: 150px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card {
+        width: calc(100%/5);
+    }
 }
 </style>

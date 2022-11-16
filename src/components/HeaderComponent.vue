@@ -6,11 +6,15 @@
         </div>
         <div><button>Select category</button></div>
     </nav>
+
 </template>
 
 <script>
+import MainComponent from './MainComponent.vue';
+
 export default {
-    name: "HeaderComponent"
+    name: "HeaderComponent",
+    components: { MainComponent }
 }
 
 </script>

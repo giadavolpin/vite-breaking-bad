@@ -1,5 +1,6 @@
 @use './variables' as *; //as = usa * = tutto 
 
-nav main {
+nav,
+main {
     background-color: $blucard;
 }
