@@ -25,7 +25,7 @@ export default {
     data() {
         return {
             apiURL: 'https://www.breakingbadapi.com/api/characters',
-            characters: [],
+            characters: []
 
         }
     },
@@ -76,7 +76,7 @@ img {
     flex-wrap: wrap;
 
     .card {
-        width: calc(100%/5);
+        width: calc(100% / 5);
     }
 }
 </style>
